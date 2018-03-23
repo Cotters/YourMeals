@@ -29,7 +29,7 @@ class SegmentedTableView: UIViewController, UITableViewDelegate, UITableViewData
     func setupTableView(topAnchor: NSLayoutYAxisAnchor, _ bottomAnchor: NSLayoutYAxisAnchor? = nil, _ leftAnchor: NSLayoutXAxisAnchor, _ rightAnchor: NSLayoutXAxisAnchor) {
         // Ingredients/Method table view with segmented control
         view.addSubview(tableViewSegmentedControl)
-        tableViewSegmentedControl.anchor(topAnchor, bottom: nil, left: leftAnchor, right: rightAnchor, topConstant: 16, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 24)
+        tableViewSegmentedControl.anchor(topAnchor, bottom: nil, left: leftAnchor, right: rightAnchor, topConstant: 16, bottomConstant: 0, leftConstant: 5, rightConstant: -5, width: 0, height: 24)
         tableViewSegmentedControl.addTarget(self, action: #selector(switchTableViewContents), for: .valueChanged)
         
         // TableView

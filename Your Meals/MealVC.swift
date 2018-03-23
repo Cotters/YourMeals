@@ -40,15 +40,13 @@ class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
     
     func setupView() {
         view.addSubview(mealImageView)
-        mealImageView.anchor(view.topAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 200)
+        mealImageView.anchor(view.topAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 150)
     }
     
     func setupNavBar() {
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.tintColor = .red
         
-//        let backBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "back_icon"), style: .plain, target: self, action: #selector(dismissView))
-//        navigationItem.leftBarButtonItem = backBtn
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMeal))
         
     }
