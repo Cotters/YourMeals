@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0353392F1F040B8E0045AACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353392E1F040B8E0045AACE /* AppDelegate.swift */; };
+		035339361F040B8F0045AACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 035339351F040B8F0045AACE /* Assets.xcassets */; };
+		035339411F040C690045AACE /* MealFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339401F040C690045AACE /* MealFeedVC.swift */; };
+		035339431F05371E0045AACE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339421F05371E0045AACE /* Extensions.swift */; };
+		035339461F0574670045AACE /* MealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339451F0574670045AACE /* MealVC.swift */; };
+		035339481F0576850045AACE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339471F0576850045AACE /* Meal.swift */; };
+		0353394C1F0581300045AACE /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353394B1F0581300045AACE /* CustomTabBarController.swift */; };
+		0353394E1F0582380045AACE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353394D1F0582380045AACE /* ProfileVC.swift */; };
+		035339501F058FBE0045AACE /* MealHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0353394F1F058FBE0045AACE /* MealHeaderCell.swift */; };
+		035339531F0591CD0045AACE /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339521F0591CD0045AACE /* BaseCell.swift */; };
+		035339591F05C5FD0045AACE /* AddMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339581F05C5FC0045AACE /* AddMealVC.swift */; };
+		F9395EFD2065263000F970DA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9395EFC2065263000F970DA /* Launch Screen.storyboard */; };
+		F9395EFF2065284A00F970DA /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9395EFE2065284A00F970DA /* ActivityViewController.swift */; };
+		F9395F012065319900F970DA /* Playground.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9395F002065319900F970DA /* Playground.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0353392B1F040B8E0045AACE /* Your Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your Meals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0353392E1F040B8E0045AACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		035339351F040B8F0045AACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0353393A1F040B8F0045AACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		035339401F040C690045AACE /* MealFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealFeedVC.swift; sourceTree = "<group>"; };
+		035339421F05371E0045AACE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		035339451F0574670045AACE /* MealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealVC.swift; sourceTree = "<group>"; };
+		035339471F0576850045AACE /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		0353394B1F0581300045AACE /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		0353394D1F0582380045AACE /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		0353394F1F058FBE0045AACE /* MealHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealHeaderCell.swift; sourceTree = "<group>"; };
+		035339521F0591CD0045AACE /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		035339581F05C5FC0045AACE /* AddMealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMealVC.swift; sourceTree = "<group>"; };
+		F9395EFC2065263000F970DA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F9395EFE2065284A00F970DA /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		F9395F002065319900F970DA /* Playground.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Playground.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		035339281F040B8D0045AACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		035339221F040B8D0045AACE = {
+			isa = PBXGroup;
+			children = (
+				0353392D1F040B8E0045AACE /* Your Meals */,
+				0353392C1F040B8E0045AACE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0353392C1F040B8E0045AACE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0353392B1F040B8E0045AACE /* Your Meals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0353392D1F040B8E0045AACE /* Your Meals */ = {
+			isa = PBXGroup;
+			children = (
+				035339441F0537240045AACE /* Helpers */,
+				0353392E1F040B8E0045AACE /* AppDelegate.swift */,
+				0353394A1F0579F70045AACE /* Controller */,
+				035339491F0579EE0045AACE /* Model */,
+				035339511F058FC20045AACE /* View */,
+				035339351F040B8F0045AACE /* Assets.xcassets */,
+				F9395EFC2065263000F970DA /* Launch Screen.storyboard */,
+				0353393A1F040B8F0045AACE /* Info.plist */,
+			);
+			path = "Your Meals";
+			sourceTree = "<group>";
+		};
+		035339441F0537240045AACE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				035339421F05371E0045AACE /* Extensions.swift */,
+				035339521F0591CD0045AACE /* BaseCell.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		035339491F0579EE0045AACE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				035339471F0576850045AACE /* Meal.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0353394A1F0579F70045AACE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0353394B1F0581300045AACE /* CustomTabBarController.swift */,
+				035339401F040C690045AACE /* MealFeedVC.swift */,
+				035339451F0574670045AACE /* MealVC.swift */,
+				035339581F05C5FC0045AACE /* AddMealVC.swift */,
+				F9395F002065319900F970DA /* Playground.xib */,
+				F9395EFE2065284A00F970DA /* ActivityViewController.swift */,
+				0353394D1F0582380045AACE /* ProfileVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		035339511F058FC20045AACE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0353394F1F058FBE0045AACE /* MealHeaderCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0353392A1F040B8D0045AACE /* Your Meals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0353393D1F040B8F0045AACE /* Build configuration list for PBXNativeTarget "Your Meals" */;
+			buildPhases = (
+				035339271F040B8D0045AACE /* Sources */,
+				035339281F040B8D0045AACE /* Frameworks */,
+				035339291F040B8D0045AACE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Your Meals";
+			productName = "Your Meals";
+			productReference = 0353392B1F040B8E0045AACE /* Your Meals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		035339231F040B8D0045AACE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Josh Cotterell";
+				TargetAttributes = {
+					0353392A1F040B8D0045AACE = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 86997N65SQ;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 035339261F040B8D0045AACE /* Build configuration list for PBXProject "Your Meals" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 035339221F040B8D0045AACE;
+			productRefGroup = 0353392C1F040B8E0045AACE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0353392A1F040B8D0045AACE /* Your Meals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		035339291F040B8D0045AACE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9395EFD2065263000F970DA /* Launch Screen.storyboard in Resources */,
+				F9395F012065319900F970DA /* Playground.xib in Resources */,
+				035339361F040B8F0045AACE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		035339271F040B8D0045AACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				035339481F0576850045AACE /* Meal.swift in Sources */,
+				0353392F1F040B8E0045AACE /* AppDelegate.swift in Sources */,
+				0353394E1F0582380045AACE /* ProfileVC.swift in Sources */,
+				0353394C1F0581300045AACE /* CustomTabBarController.swift in Sources */,
+				035339531F0591CD0045AACE /* BaseCell.swift in Sources */,
+				035339431F05371E0045AACE /* Extensions.swift in Sources */,
+				035339411F040C690045AACE /* MealFeedVC.swift in Sources */,
+				035339461F0574670045AACE /* MealVC.swift in Sources */,
+				035339501F058FBE0045AACE /* MealHeaderCell.swift in Sources */,
+				035339591F05C5FD0045AACE /* AddMealVC.swift in Sources */,
+				F9395EFF2065284A00F970DA /* ActivityViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0353393B1F040B8F0045AACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0353393C1F040B8F0045AACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0353393E1F040B8F0045AACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86997N65SQ;
+				INFOPLIST_FILE = "Your Meals/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cotters.Your-Meals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0353393F1F040B8F0045AACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 86997N65SQ;
+				INFOPLIST_FILE = "Your Meals/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cotters.Your-Meals";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		035339261F040B8D0045AACE /* Build configuration list for PBXProject "Your Meals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0353393B1F040B8F0045AACE /* Debug */,
+				0353393C1F040B8F0045AACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0353393D1F040B8F0045AACE /* Build configuration list for PBXNativeTarget "Your Meals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0353393E1F040B8F0045AACE /* Debug */,
+				0353393F1F040B8F0045AACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 035339231F040B8D0045AACE /* Project object */;
+}

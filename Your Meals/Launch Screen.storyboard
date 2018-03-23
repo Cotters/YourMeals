@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paella_meal" translatesAutoresizingMaskIntoConstraints="NO" id="ZoJ-7i-9HM">
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGC-sy-O6L">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Meals" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qiQ-lT-pok"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.59999999999999998" height="1"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TGC-sy-O6L" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="3sO-J9-xaG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GJd-Yh-RWb" secondAttribute="trailing" constant="8" id="4SW-7x-M6D"/>
+                            <constraint firstItem="ZoJ-7i-9HM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="99d-Aa-cPD"/>
+                            <constraint firstItem="ZoJ-7i-9HM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="BCs-w9-Li4"/>
+                            <constraint firstItem="ZoJ-7i-9HM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="INz-Lq-HEu"/>
+                            <constraint firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
+                            <constraint firstItem="TGC-sy-O6L" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="R2C-kF-wfl"/>
+                            <constraint firstItem="TGC-sy-O6L" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Yrb-jC-kM2"/>
+                            <constraint firstItem="ZoJ-7i-9HM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="faK-QT-zWa"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gJN-Xk-s61"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="TGC-sy-O6L" secondAttribute="bottom" id="ieQ-fR-qCi"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="8" id="nd8-Ak-58l"/>
+                            <constraint firstAttribute="trailing" secondItem="ZoJ-7i-9HM" secondAttribute="trailing" id="oew-c8-udN"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ZoJ-7i-9HM" secondAttribute="bottom" id="rSw-SQ-sa5"/>
+                            <constraint firstItem="TGC-sy-O6L" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tZ0-8q-p4w"/>
+                            <constraint firstAttribute="trailing" secondItem="TGC-sy-O6L" secondAttribute="trailing" id="zpv-OT-l65"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paella_meal" width="1426" height="713"/>
+    </resources>
+</document>
