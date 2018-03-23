@@ -55,6 +55,7 @@ class MealFeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.title = "Feed Me"
         navigationController?.navigationBar.barTintColor = .white
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -72,7 +73,7 @@ class MealFeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nextViewController = MealVC(collectionViewLayout: UICollectionViewFlowLayout())
+        let nextViewController = MealVC()
         nextViewController.meal = meals[indexPath.row]
         
         self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -82,7 +83,7 @@ class MealFeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
 }
 
 
-class MealCell: BaseCell {
+class MealCell: BaseCollectionViewCell {
     
     var meal: Meal? {
         didSet {

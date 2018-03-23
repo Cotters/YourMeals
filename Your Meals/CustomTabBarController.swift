@@ -13,7 +13,7 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let feedController = MealFeedVC(collectionViewLayout: UICollectionViewFlowLayout())
+        
         let feedNavController = UINavigationController(rootViewController: MealFeedVC(collectionViewLayout: UICollectionViewFlowLayout()))
         feedNavController.tabBarItem.title = "Feed"
         feedNavController.tabBarItem.image = #imageLiteral(resourceName: "bell_icon")
@@ -34,7 +34,7 @@ class CustomTabBarController: UITabBarController {
         profileNavController.tabBarItem.title = "Profile"
         profileNavController.tabBarItem.image = #imageLiteral(resourceName: "profile_icon")
         
-        viewControllers = [feedNavController, addMealNavController, profileNavController]
+        viewControllers = [feedNavController, addMealNavController, activityView, profileNavController]
         
         tabBar.isTranslucent = false
         

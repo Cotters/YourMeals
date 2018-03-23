@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseCell: UICollectionViewCell {
+class BaseCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,4 +23,20 @@ class BaseCell: UICollectionViewCell {
         backgroundColor = .white
     }
     
+}
+
+class BaseTableViewCell: UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupView() {
+        backgroundColor = .white
+    }
 }

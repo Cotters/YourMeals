@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MealHeaderCell: BaseCell {
+class MealHeaderCell: BaseCollectionViewCell {
     
     var mealVC: MealVC?
     

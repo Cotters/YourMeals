@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddMealVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     let textFieldSize: CGFloat = 24
     
@@ -31,40 +31,24 @@ class AddMealVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         tf.autocapitalizationType = .words
         tf.clearButtonMode = .always
         tf.spellCheckingType = .yes
-        tf.returnKeyType = .next
+        tf.returnKeyType = .done
         tf.layer.cornerRadius = 5
         return tf
     }()
-    
-    let tableViewSegmentedControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl(items: ["Ingredients", "Method"])
-        segmentedControl.selectedSegmentIndex = 0 // Select Ingredients by default
-        segmentedControl.tintColor = UIColor(r: 234, g: 140, b: 0) // Orange to stick with theme
-        return segmentedControl
-    }()
-    
-    var tableView: UITableView!
-    
-    var method: [String] = ["Place bread in toaster and toast until it pops.", "Later a thin layer over the toast until all of one side is covered.", "Apply any other condement you wish and enjoy!"]
-    var ingredients: [String] = ["Bread", "Butter"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupView()
+        setupTableView(topAnchor: titleTextField.bottomAnchor, nil, titleTextField.leftAnchor, titleTextField.rightAnchor)
         
         // Allow user to tap screen to dismiss keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
-        
-        // Moves the view up and down in response to keyboard showing/hiding
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func setupNavBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(clearView))
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMeal))
     }
     
@@ -91,22 +75,7 @@ class AddMealVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         
         // Meal title textView
         titleTextField.anchor(mealImageView.bottomAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 16, bottomConstant: 0, leftConstant: 16, rightConstant: -16, width: 0, height: textFieldSize)
-        
-        // Ingredients/Method table view with segmented control
-        view.addSubview(tableViewSegmentedControl)
-        tableViewSegmentedControl.anchor(titleTextField.bottomAnchor, bottom: nil, left: titleTextField.leftAnchor, right: titleTextField.rightAnchor, topConstant: 16, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 24)
-        tableViewSegmentedControl.addTarget(self, action: #selector(switchTableViewContents), for: .valueChanged)
-        
-        // TableView
-        tableView = UITableView(frame: view.bounds, style: .plain)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        view.addSubview(tableView)
-        tableView.anchor(tableViewSegmentedControl.bottomAnchor, bottom: view.bottomAnchor, left: titleTextField.leftAnchor, right: titleTextField.rightAnchor, topConstant: 5, bottomConstant: -16, leftConstant: 0, rightConstant: 0, width: 0, height: 0)
-        tableView.backgroundColor = .white
-        
+            
     }
     
     @objc func clearView() {
@@ -120,24 +89,6 @@ class AddMealVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
-    }
-    
-    /// This method adjusts the height of the view as the keyboard is shown.
-    @objc func keyboardWillShow(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
-    }
-    
-    /// This method adjusts the height of the view as the keyboard is hidden.
-    @objc func keyboardWillHide(notification: Notification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
-            }
-        }
     }
     
     @objc func addImage() {
@@ -192,29 +143,54 @@ class AddMealVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.resignFirstResponder()
+        print("Done")
+        dismissKeyboard()
         return true
     }
     
-    @objc func switchTableViewContents() {
-        // TODO: Refresh tableview
-        tableView.reloadData()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableViewSegmentedControl.selectedSegmentIndex == 0 ? ingredients.count : method.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableViewSegmentedControl.selectedSegmentIndex == 0 ? 40 : 100 // TODO: Make dynamic heights
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("sel")
         
-        let text = tableViewSegmentedControl.selectedSegmentIndex == 0 ? ingredients[indexPath.row] : method[indexPath.row]
-        cell.textLabel?.text = "\(indexPath.row). " + text
-//        cell.detailTextLabel?.text = "\(indexPath.row). " + text
-        return cell
+        if tableViewSegmentedControl.selectedSegmentIndex == 1 {
+            if let methodCell = tableView.dequeueReusableCell(withIdentifier: "MethodCell", for: indexPath) as? MethodTableViewCell {
+                // Strikethrough text
+                let txt = methodCell.methodTxtView.text!
+                let strike = NSAttributedString.strikeThroughText(txt)
+                methodCell.methodTxtView.text = String(describing: strike)
+            }
+        }
+        
+        // Else load ingredient cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let txt = cell.textLabel!.text!
+        let strike = NSAttributedString.strikeThroughText(txt)
+        cell.textLabel!.text = String(describing: strike)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

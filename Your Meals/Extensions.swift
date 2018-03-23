@@ -59,3 +59,12 @@ extension UIView {
     }
     
 }
+
+extension NSAttributedString {
+    static func strikeThroughText(_ text: String ) -> NSAttributedString {
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: text)
+        attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+        attributeString.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.white, range: NSMakeRange(0, attributeString.length))
+        return attributeString
+    }
+}

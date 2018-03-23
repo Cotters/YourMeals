@@ -20,7 +20,9 @@
 		035339591F05C5FD0045AACE /* AddMealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035339581F05C5FC0045AACE /* AddMealVC.swift */; };
 		F9395EFD2065263000F970DA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9395EFC2065263000F970DA /* Launch Screen.storyboard */; };
 		F9395EFF2065284A00F970DA /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9395EFE2065284A00F970DA /* ActivityViewController.swift */; };
-		F9395F012065319900F970DA /* Playground.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9395F002065319900F970DA /* Playground.xib */; };
+		F967CD3520656F4800C4A158 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F967CD3420656F4800C4A158 /* GoogleService-Info.plist */; };
+		F967CD3720659E0900C4A158 /* SegmentedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967CD3620659E0800C4A158 /* SegmentedTableView.swift */; };
+		F967CD3920659E6800C4A158 /* MethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967CD3820659E6800C4A158 /* MethodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +41,9 @@
 		035339581F05C5FC0045AACE /* AddMealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMealVC.swift; sourceTree = "<group>"; };
 		F9395EFC2065263000F970DA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F9395EFE2065284A00F970DA /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		F9395F002065319900F970DA /* Playground.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Playground.xib; sourceTree = "<group>"; };
+		F967CD3420656F4800C4A158 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F967CD3620659E0800C4A158 /* SegmentedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedTableView.swift; sourceTree = "<group>"; };
+		F967CD3820659E6800C4A158 /* MethodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 				035339351F040B8F0045AACE /* Assets.xcassets */,
 				F9395EFC2065263000F970DA /* Launch Screen.storyboard */,
 				0353393A1F040B8F0045AACE /* Info.plist */,
+				F967CD3420656F4800C4A158 /* GoogleService-Info.plist */,
 			);
 			path = "Your Meals";
 			sourceTree = "<group>";
@@ -105,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				0353394B1F0581300045AACE /* CustomTabBarController.swift */,
+				F967CD3620659E0800C4A158 /* SegmentedTableView.swift */,
 				035339401F040C690045AACE /* MealFeedVC.swift */,
 				035339451F0574670045AACE /* MealVC.swift */,
 				035339581F05C5FC0045AACE /* AddMealVC.swift */,
-				F9395F002065319900F970DA /* Playground.xib */,
 				F9395EFE2065284A00F970DA /* ActivityViewController.swift */,
 				0353394D1F0582380045AACE /* ProfileVC.swift */,
 			);
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0353394F1F058FBE0045AACE /* MealHeaderCell.swift */,
+				F967CD3820659E6800C4A158 /* MethodCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9395EFD2065263000F970DA /* Launch Screen.storyboard in Resources */,
-				F9395F012065319900F970DA /* Playground.xib in Resources */,
+				F967CD3520656F4800C4A158 /* GoogleService-Info.plist in Resources */,
 				035339361F040B8F0045AACE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,10 +209,12 @@
 				0353394C1F0581300045AACE /* CustomTabBarController.swift in Sources */,
 				035339531F0591CD0045AACE /* BaseCell.swift in Sources */,
 				035339431F05371E0045AACE /* Extensions.swift in Sources */,
+				F967CD3720659E0900C4A158 /* SegmentedTableView.swift in Sources */,
 				035339411F040C690045AACE /* MealFeedVC.swift in Sources */,
 				035339461F0574670045AACE /* MealVC.swift in Sources */,
 				035339501F058FBE0045AACE /* MealHeaderCell.swift in Sources */,
 				035339591F05C5FD0045AACE /* AddMealVC.swift in Sources */,
+				F967CD3920659E6800C4A158 /* MethodCell.swift in Sources */,
 				F9395EFF2065284A00F970DA /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
