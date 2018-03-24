@@ -9,6 +9,9 @@
 import UIKit
 
 extension UIColor {
+    
+    static let orangeTheme = UIColor(r: 255, g: 150, b: 150)
+    
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1.0)
     }

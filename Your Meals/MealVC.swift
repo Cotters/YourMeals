@@ -26,7 +26,6 @@ class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,10 +44,7 @@ class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
     
     func setupNavBar() {
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.tintColor = .red
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addMeal))
-        
+        navigationController?.navigationBar.tintColor = .orangeTheme
     }
     
     
@@ -60,10 +56,6 @@ class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
 
     @objc func dismissView() {
         navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func addMeal() {
-        print("Adding meal")
     }
     
 }
