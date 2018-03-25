@@ -26,7 +26,7 @@ class CustomTabBarController: UITabBarController {
         
         let activityView = UINavigationController(rootViewController: ActivityViewController())
         activityView.tabBarItem.title = "Activity"
-        activityView.tabBarItem.image = #imageLiteral(resourceName: "like_icon")
+        activityView.tabBarItem.image = #imageLiteral(resourceName: "heart_icon")
         
         
         let profileController = ProfileVC()
@@ -44,7 +44,7 @@ class CustomTabBarController: UITabBarController {
         
         tabBar.clipsToBounds = true
         tabBar.layer.addSublayer(topBorder)
-        tabBar.tintColor = UIColor(r: 230, g: 126, b: 34)
+        tabBar.tintColor = .orangeTheme
         
     }
     

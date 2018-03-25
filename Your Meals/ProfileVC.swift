@@ -18,8 +18,8 @@ class ProfileVC: UIViewController {
         iv.layer.cornerRadius = 50//profileImageSize/2
         iv.layer.masksToBounds = true
         iv.image = #imageLiteral(resourceName: "steve_prof_img")
-        iv.layer.borderColor = UIColor.black.cgColor
-        iv.layer.borderWidth = 1.0
+        iv.layer.borderColor = UIColor.white.cgColor
+        iv.layer.borderWidth = 2.0
         return iv
     }()
     
@@ -29,7 +29,7 @@ class ProfileVC: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGrey
         navigationItem.title = "Profile"
         
         

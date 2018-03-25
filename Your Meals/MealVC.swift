@@ -11,35 +11,35 @@ import UIKit
 
 class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
     
+    /// Contains an image of the recipe.
     let mealImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         return iv
     }()
     
+    /// Stores all the information on a recipe.
     var meal: Meal? {
         didSet {
             guard let title = meal?.title,
             let image = meal?.image else { return }
             mealImageView.image = image
             navigationItem.title = title
+            setupTableView()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
+        
         // For swipe to go back feature
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        setupView()
         setupNavBar()
-        setupTableView(topAnchor: mealImageView.bottomAnchor, nil, view.leftAnchor, view.rightAnchor)
-    }
-    
-    func setupView() {
-        view.addSubview(mealImageView)
-        mealImageView.anchor(view.topAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 150)
+        setupView()
+        // Initialise the tableView
+        initTableView()
     }
     
     func setupNavBar() {
@@ -47,6 +47,17 @@ class MealVC: SegmentedTableView, UIGestureRecognizerDelegate {
         navigationController?.navigationBar.tintColor = .orangeTheme
     }
     
+    func setupView() {
+        view.addSubview(mealImageView)
+        mealImageView.anchor(view.topAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 150)
+    }
+    
+    func setupTableView() {
+        let guide = view.safeAreaLayoutGuide
+        
+        view.addSubview(tableView)
+        tableView.anchor(mealImageView.bottomAnchor, bottom: guide.bottomAnchor, left: guide.leftAnchor, right: guide.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 0)
+    }
     
     let zoomImageView = UIImageView()
     

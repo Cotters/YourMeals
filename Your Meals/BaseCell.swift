@@ -12,6 +12,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
         setupView()
     }
     
@@ -20,7 +21,7 @@ class BaseCollectionViewCell: UICollectionViewCell {
     }
     
     func setupView() {
-        backgroundColor = .white
+        fatalError("You need to override setup view method to customise your cell.")
     }
     
 }
@@ -29,6 +30,7 @@ class BaseTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .white
         setupView()
     }
     
@@ -37,6 +39,6 @@ class BaseTableViewCell: UITableViewCell {
     }
     
     func setupView() {
-        backgroundColor = .white
+        fatalError("You need to override setup view method to customise your cell.")
     }
 }

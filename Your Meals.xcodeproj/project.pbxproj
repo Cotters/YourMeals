@@ -23,6 +23,7 @@
 		F967CD3520656F4800C4A158 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F967CD3420656F4800C4A158 /* GoogleService-Info.plist */; };
 		F967CD3720659E0900C4A158 /* SegmentedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967CD3620659E0800C4A158 /* SegmentedTableView.swift */; };
 		F967CD3920659E6800C4A158 /* MethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F967CD3820659E6800C4A158 /* MethodCell.swift */; };
+		F97F29032068346F007E8B6E /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F29022068346F007E8B6E /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F967CD3420656F4800C4A158 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F967CD3620659E0800C4A158 /* SegmentedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedTableView.swift; sourceTree = "<group>"; };
 		F967CD3820659E6800C4A158 /* MethodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodCell.swift; sourceTree = "<group>"; };
+		F97F29022068346F007E8B6E /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				035339581F05C5FC0045AACE /* AddMealVC.swift */,
 				F9395EFE2065284A00F970DA /* ActivityViewController.swift */,
 				0353394D1F0582380045AACE /* ProfileVC.swift */,
+				F97F29022068346F007E8B6E /* CameraVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				F967CD3720659E0900C4A158 /* SegmentedTableView.swift in Sources */,
 				035339411F040C690045AACE /* MealFeedVC.swift in Sources */,
 				035339461F0574670045AACE /* MealVC.swift in Sources */,
+				F97F29032068346F007E8B6E /* CameraVC.swift in Sources */,
 				035339501F058FBE0045AACE /* MealHeaderCell.swift in Sources */,
 				035339591F05C5FD0045AACE /* AddMealVC.swift in Sources */,
 				F967CD3920659E6800C4A158 /* MethodCell.swift in Sources */,
@@ -335,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86997N65SQ;
 				INFOPLIST_FILE = "Your Meals/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cotters.Your-Meals";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86997N65SQ;
 				INFOPLIST_FILE = "Your Meals/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cotters.Your-Meals";
 				PRODUCT_NAME = "$(TARGET_NAME)";

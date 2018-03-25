@@ -12,7 +12,6 @@ class MealFeedVC: UICollectionViewController, UICollectionViewDelegateFlowLayout
     
     let cellId = "Cell"
     
-    
     // TODO: - Retrieve from Firebase
     var meals:[Meal] = {
         var pizza = Meal()
@@ -116,13 +115,13 @@ class MealCell: BaseCollectionViewCell {
     let subtitleText: UILabel = {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 14)
-        lbl.textColor = .lightGray
+        lbl.textColor = .lightGrey
         return lbl
     }()
     
     let heartBtn: UIButton = {
         let btn = UIButton(type: .custom)
-        btn.setImage(#imageLiteral(resourceName: "like_icon"), for: .normal)
+        btn.setImage(#imageLiteral(resourceName: "heart_outline"), for: .normal)
         return btn
     }()
     
@@ -147,7 +146,7 @@ class MealCell: BaseCollectionViewCell {
     
     var liked = false
     @objc func toggleLiked() {
-        liked ? heartBtn.setImage(#imageLiteral(resourceName: "like_icon"), for: .normal) : heartBtn.setImage(#imageLiteral(resourceName: "heart_coloured"), for: .normal)
+        liked ? heartBtn.setImage(#imageLiteral(resourceName: "heart_outline"), for: .normal) : heartBtn.setImage(#imageLiteral(resourceName: "heart_filled"), for: .normal)
         liked = (liked ? false : true) // invert the boolean value of liked
     }
     

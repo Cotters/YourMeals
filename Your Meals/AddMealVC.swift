@@ -14,7 +14,7 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
     
     let mealImageView: UIImageView = {
         let iv = UIImageView()
-        iv.backgroundColor = UIColor(r: 224, g: 224, b: 224)
+        iv.backgroundColor = .lightGrey
         iv.contentMode = .scaleAspectFill
         iv.isUserInteractionEnabled = true
         iv.clipsToBounds = true
@@ -40,7 +40,8 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
         super.viewDidLoad()
         setupNavBar()
         setupView()
-        setupTableView(topAnchor: titleTextField.bottomAnchor, nil, titleTextField.leftAnchor, titleTextField.rightAnchor)
+        initTableView()
+        
         
         // Allow user to tap screen to dismiss keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -53,7 +54,7 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
     }
     
     func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .lightGrey
         navigationController?.navigationBar.isTranslucent = true
         navigationItem.title = "Add your Meal"
         
@@ -75,6 +76,12 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
         
         // Meal title textView
         titleTextField.anchor(mealImageView.bottomAnchor, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, topConstant: 16, bottomConstant: 0, leftConstant: 16, rightConstant: -16, width: 0, height: textFieldSize)
+        
+        let guide = view.safeAreaLayoutGuide
+        // Method/Ingredients tableView
+        view.addSubview(tableView)
+        tableView.anchor(mealImageView.bottomAnchor, bottom: guide.bottomAnchor, left: guide.leftAnchor, right: guide.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 0, rightConstant: 0, width: 0, height: 0)
+        
             
     }
     
@@ -107,8 +114,15 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
         
         let cameraAction = UIAlertAction(title: "Take photo", style: .default) {
             UIAlertAction in
-            
-            print("take me to take photo!")
+            // Allows the user to use their camera to take a picture
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                let camera = UIImagePickerController()
+                camera.delegate = self
+                camera.sourceType = .camera
+                camera.allowsEditing = true
+                // Present the camera
+                self.present(camera, animated: true, completion: nil)
+            }
         }
         alertController.addAction(cameraAction)
         
@@ -117,7 +131,6 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
         alertController.addAction(cancelAction)
         
         self.present(alertController, animated: true, completion: nil)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -146,25 +159,6 @@ class AddMealVC: SegmentedTableView, UIImagePickerControllerDelegate, UINavigati
         print("Done")
         dismissKeyboard()
         return true
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("sel")
-        
-        if tableViewSegmentedControl.selectedSegmentIndex == 1 {
-            if let methodCell = tableView.dequeueReusableCell(withIdentifier: "MethodCell", for: indexPath) as? MethodTableViewCell {
-                // Strikethrough text
-                let txt = methodCell.methodTxtView.text!
-                let strike = NSAttributedString.strikeThroughText(txt)
-                methodCell.methodTxtView.text = String(describing: strike)
-            }
-        }
-        
-        // Else load ingredient cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let txt = cell.textLabel!.text!
-        let strike = NSAttributedString.strikeThroughText(txt)
-        cell.textLabel!.text = String(describing: strike)
     }
 }
 
