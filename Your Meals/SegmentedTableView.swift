@@ -24,6 +24,7 @@ class SegmentedTableView: UIViewController, UITableViewDelegate, UITableViewData
         tableView.register(MethodTableViewCell.self, forCellReuseIdentifier: "MethodCell")
         tableView.isUserInteractionEnabled = true
         tableView.backgroundColor = .white
+        tableView.separatorColor = .clear
         // Dynamic cell height
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300

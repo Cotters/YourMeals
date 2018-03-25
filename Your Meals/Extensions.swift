@@ -12,6 +12,7 @@ extension UIColor {
     
     static let orangeTheme = UIColor(r: 230, g: 126, b: 34)
     static let lightGrey = UIColor(r: 224, g: 224, b: 224)
+    static let darkGrey = UIColor(r: 25, g: 25, b: 25)
     
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1.0)
@@ -71,4 +72,12 @@ extension NSAttributedString {
         attributeString.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.white, range: NSMakeRange(0, attributeString.length))
         return attributeString
     }
+}
+
+extension UIViewController {
+    
+    func showLoginScreen() {
+        present(LoginViewController(), animated: true, completion: nil)
+    }
+    
 }
